@@ -178,8 +178,8 @@ y_test = pd.Series(y_test.apply(y_encode))
 
 from sklearn.metrics import accuracy_score
 # Predict the labels for the test data
-y_pred = reg.predict(X_train)
-
+y_pred = reg.predict(X_test)
+print(len(y_pred))
 # Calculate accuracy
 accuracy = accuracy_score(y_pred, y_test)
 print("Accuracy:", accuracy)
